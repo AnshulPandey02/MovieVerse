@@ -14,7 +14,7 @@ app.use(cors());
 app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
-app.get("/", (req, res) => res.send("CineVault API Running 🎬"));
+app.get("/", (req, res) => res.send("MovieVerse API Running 🎬"));
 app.use("/api/users", userRoutes);
 
 const uploadsPath = path.join(process.cwd(), "uploads");
