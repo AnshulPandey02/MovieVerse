@@ -15,6 +15,11 @@ app.use(express.json({ limit: "10mb" }));
 app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
 app.get("/", (req, res) => res.send("MovieVerse API Running 🎬"));
+
+app.get("/test", (req, res) => {
+  res.send("Test route working");
+});
+
 app.use("/api/users", userRoutes);
 
 const uploadsPath = path.join(process.cwd(), "uploads");
